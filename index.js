@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import Hello from './Hello';
 import './style.css';
+import Add from './component/add';
+import List from './component/list';
+import { Provider } from 'react-redux';
+import { makeStore } from './store/';
 
 class App extends Component {
   constructor() {
@@ -14,13 +17,14 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Hello name={this.state.name} />
-        <p>
-          Start editing to see some magic happen :)
-        </p>
+      <h1>Todo Application</h1>
+      <Add />
+      <List />
       </div>
     );
   }
 }
 
-render(<App />, document.getElementById('root'));
+render(<Provider store={makeStore()}>
+<App />
+</Provider>, document.getElementById('root'));
