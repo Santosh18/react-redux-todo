@@ -10,7 +10,7 @@ class TodoListComponet extends React.Component {
     //console.log(i);
     this.props.del(this.state.i);
     // this.props.todos.splice(i, 1);
-    //  this.setState({text : this.state.todos});
+    //this.setState({text : this.props.todos});
   }
   render() {
     return (
