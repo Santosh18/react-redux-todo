@@ -7,3 +7,7 @@ export const add = (text) => {
 // export const delete = (i) => {
 //   return { type: 'DELETE', payload: i };
 // }
+
+export const del = (i) => {
+  return { type: 'DELETE', payload: i };
+}
