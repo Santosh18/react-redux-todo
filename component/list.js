@@ -12,7 +12,7 @@ class TodoListComponet extends React.Component {
         {this.props.todos.map((x,i)=> 
         <ul>
           <li>{x}
-            <button onClick={(e) => this.deleteTask(i)}>Delete{i}</button>
+            <button onClick={(e) => this.deleteTask(e,i)}>Delete{i}</button>
           </li>
         </ul>)}
       </div>
