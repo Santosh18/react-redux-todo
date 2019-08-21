@@ -4,9 +4,10 @@ import  {del}  from '../actions/todo';
 
 
 class TodoListComponet extends React.Component {
-  state = { text: this.props.todos, i : this.props.todos };
+  state = { text: this.props.todos, i : 0 };
   del = (e,i) => {
     this.setState({i : i});
+    console.log(i);
     this.props.del(this.state.i);
     // this.props.todos.splice(i, 1);
     //  this.setState({text : this.state.todos});
