@@ -10,7 +10,7 @@ export const todoReducer = (state = [], action) => {
      // tempVar = [...state];
      console.log(action.payload);
       state.splice(action.payload,1);
-      return [ state.splice(0,1)];
+      return [...state];
   }
     
   return state
