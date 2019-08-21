@@ -8,9 +8,9 @@ export const todoReducer = (state = [], action) => {
   if(action.type === 'DELETE') { 
       //return [...state, this.props.todos.splice(i, 1) ]
       tempVar = [...state];
-      this.tempVar.splice(payload.i,1);
+      this.tempVar.splice(action.payload.i,1);
       this.setState(this.tempVar);
-    }
+  }
     
   return state
 }
