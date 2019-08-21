@@ -2,8 +2,10 @@ import React from 'react';
 import { connect } from 'react-redux'
 
 class TodoListComponet extends React.Component {
+  state = { text: this.props.todos };
   deleteTask = (e,i) => {
-    console.log(i);
+    this.props.todos.splice(i, 1);
+     this.setState({text : this.state.todos});
   }
   render() {
     return (
