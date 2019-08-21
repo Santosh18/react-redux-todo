@@ -6,7 +6,10 @@ class TodoListComponet extends React.Component {
     return (
       <div>
         <p>List ({this.props.todos.length})</p>
-        {this.props.todos.map(x=> <p>{x}</p>)}
+        {this.props.todos.map((x,i)=> 
+        <ul>
+          <li>{x}<button>Delete{i}</button></li>
+        </ul>)}
       </div>
     )
   }
