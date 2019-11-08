@@ -5,12 +5,12 @@ export const todoReducer = (state = [], action) => {
     return [...state, action.payload]
   }
 
-  if(action.type === 'DELETE') { 
-      //return [...state, this.props.todos.splice(i, 1) ]
-     // tempVar = [...state];
-      console.log(action.payload);
-      state.splice(action.payload, 1);
-      return state;
+  if(action.type === 'DELETE') {
+    return state.filter(i=> i.id !== action.payload)
+  }
+
+  if(action.type === 'TODO_LOADED') {
+    return action.payload;
   }
     
   return state

@@ -10,7 +10,7 @@ export default class AddComponet extends React.Component {
     this.setState({text: e.target.value})
   }
   
-  add = () => {
+  add = async () => {
     this.props.add(this.state.text);
   }
 
